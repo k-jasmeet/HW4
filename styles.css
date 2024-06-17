@@ -1,0 +1,127 @@
+/*
+file: styles.css
+GUI Assignment: HW4 enhancing interactive multiplication table
+Jasmeet Kaur, UMass Lowell Computer Science, jasmeet_kaur@student.uml.edu
+Copyright (c) 2024 by Jasmeet. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+*/
+
+body 
+{
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+form 
+{
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.slider-container 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.slider-label 
+{
+    margin-right: 10px;
+}
+
+.ui-slider 
+{
+    margin-top: 10px;
+    width: 150px;
+}
+
+.button-container 
+{
+    display: flex;
+    gap: 10px;
+}
+
+button 
+{
+    background-color: #70d472;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.red-button
+{
+    background-color: #ff4d4d;
+    color: black;
+}
+
+label, input 
+{
+    margin-bottom: 10px;
+}
+
+.error 
+{
+    color: red;
+    font-size: 0.9em;
+}
+
+.table-container 
+{
+    overflow: auto;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+.table-wrapper 
+{
+    position: relative;
+    overflow: auto;
+}
+
+table 
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td 
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+thead th 
+{
+    background-color: #eb89b4;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+tbody th 
+{
+    background-color: #eb89b4;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+
+thead th:first-child,
+tbody th:first-child 
+{
+    z-index: 3;
+    position: sticky;
+    left: 0;
+    top: 0;
+    background-color: #eb89b4;
+}

@@ -1,0 +1,64 @@
+<!--
+file: index.html
+GUI Assignment: HW4 enhancing interactive multiplication table
+Jasmeet Kaur, UMass Lowell Computer Science, jasmeet_kaur@student.uml.edu
+Copyright (c) 2024 by Jasmeet. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multiplication Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- jQuery and jQuery UI libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Interactive Dynamic Table</h1>
+    
+    <p>Please enter your ranges below. Negative numbers are acceptable too!</p>
+    <form id="multiplicationForm">
+        <div class="slider-container">
+            <label for="startHorizontal" class="slider-label">Start of horizontal:</label>
+            <input type="text" id="startHorizontal" name="startHorizontal" required readonly>
+            <div id="startHorizontalSlider"></div>
+        </div>
+        
+        <div class="slider-container">
+            <label for="endHorizontal" class="slider-label">End of horizontal:</label>
+            <input type="text" id="endHorizontal" name="endHorizontal" required readonly>
+            <div id="endHorizontalSlider"></div>
+        </div>
+        
+        <div class="slider-container">
+            <label for="startVertical" class="slider-label">Start of vertical:</label>
+            <input type="text" id="startVertical" name="startVertical" required readonly>
+            <div id="startVerticalSlider"></div>
+        </div>
+        
+        <div class="slider-container">
+            <label for="endVertical" class="slider-label">End of vertical:</label>
+            <input type="text" id="endVertical" name="endVertical" required readonly>
+            <div id="endVerticalSlider"></div>
+        </div>
+        
+        <div class="button-container">
+            <button type="submit">Generate Table!</button>
+            <button type="button" id="removeAllTabs" class="red-button">Remove ALL Tabs!</button>
+        </div>
+    </form>
+    <div id="error-message" class="error"></div>
+
+    <div id="tabs">
+        <ul>
+            <!-- tabs will be dynamically created here -->
+        </ul>
+    </div>
+</body>
+</html>
